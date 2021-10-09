@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 import MaterialcIcons from 'react-native-vector-icons/MaterialIcons';
-import DS3 from '../../assets/images/3ds.svg';
+import Gaming from '../../assets/images/gaming.svg';
 
 const Main = ({navigation}) => {
   return (
@@ -24,7 +24,7 @@ const Main = ({navigation}) => {
         </Text>
       </View>
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <DS3
+        <Gaming
           width={300}
           height={300}
           style={{transform: [{rotate: '-15deg'}]}}
