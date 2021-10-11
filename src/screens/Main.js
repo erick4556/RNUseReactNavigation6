@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 import MaterialcIcons from 'react-native-vector-icons/MaterialIcons';
-import Gaming from '../../assets/images/gaming.svg';
+import Gaming from '../../src/assets/images/gaming.svg';
 
 const Main = ({navigation}) => {
   return (
