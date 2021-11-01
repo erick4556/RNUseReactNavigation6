@@ -33,7 +33,7 @@ const Home = ({navigation}) => {
       <ScrollView style={{padding: 20}}>
         <View style={styles.viewHeading}>
           <Text style={styles.title}>Hello Test</Text>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
               source={require('../../src/assets/images/user-profile.jpeg')}
               style={{width: 35, height: 35}}

@@ -3,7 +3,7 @@ import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 import MaterialcIcons from 'react-native-vector-icons/MaterialIcons';
 import Gaming from '../../src/assets/images/gaming.svg';
 
-const Main = ({navigation}) => {
+const Onboarding = ({navigation}) => {
   return (
     <SafeAreaView
       style={{
@@ -31,7 +31,7 @@ const Main = ({navigation}) => {
         />
       </View>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate('Login')}
         style={{
           backgroundColor: '#ad40af',
           padding: 20,
@@ -56,4 +56,4 @@ const Main = ({navigation}) => {
   );
 };
 
-export default Main;
+export default Onboarding;
