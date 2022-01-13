@@ -94,6 +94,12 @@ const Home = ({navigation}) => {
               title={item.title}
               subTitle={item.subtitle}
               isFree={item.isFree}
+              onPress={() =>
+                navigation.navigate('GameDetails', {
+                  id: item.id,
+                  title: item.title,
+                })
+              }
             />
           ))}
         {gamesTab === 2 &&
@@ -105,6 +111,12 @@ const Home = ({navigation}) => {
               subTitle={item.subtitle}
               isFree={item.isFree}
               price={item.price}
+              onPress={() =>
+                navigation.navigate('GameDetails', {
+                  id: item.id,
+                  title: item.title,
+                })
+              }
             />
           ))}
       </ScrollView>
