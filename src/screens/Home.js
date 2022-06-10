@@ -68,7 +68,7 @@ const Home = ({navigation}) => {
 
         <Carousel
           ref={c => {
-            _carousel = c;
+            this._carousel = c;
           }}
           data={sliderData}
           renderItem={renderBanner}

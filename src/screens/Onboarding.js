@@ -31,7 +31,7 @@ const Onboarding = ({navigation}) => {
         />
       </View>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.navigate('SignIn')}
         style={{
           backgroundColor: '#ad40af',
           padding: 20,
