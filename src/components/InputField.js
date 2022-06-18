@@ -8,6 +8,8 @@ const InputField = ({
   keyboardType,
   fieldButtonLabel,
   fieldButtonFunction,
+  value,
+  onChangeText,
 }) => {
   return (
     <View
@@ -23,14 +25,18 @@ const InputField = ({
         <TextInput
           placeholder={label}
           keyboardType={keyboardType}
-          style={{flex: 1, paddingVertical: 0}}
+          style={{flex: 1, paddingVertical: 0}} //For android
           secureTextEntry={true}
+          value={value}
+          onChangeText={onChangeText}
         />
       ) : (
         <TextInput
           placeholder={label}
           keyboardType={keyboardType}
           style={{flex: 1, paddingVertical: 0}} //For android
+          value={value}
+          onChangeText={onChangeText}
         />
       )}
       <TouchableOpacity onPress={fieldButtonFunction}>

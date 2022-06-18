@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -11,8 +11,14 @@ import TwitterSVG from '../../assets/images/misc/twitter.svg';
 
 import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton';
+import {AuthContext} from '../../context/AuthContext';
 
 const SignIn = ({navigation}) => {
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+
+  const {login} = useContext(AuthContext);
+
   return (
     <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
       <View style={{paddingHorizontal: 25}}>
@@ -34,7 +40,7 @@ const SignIn = ({navigation}) => {
         </Text>
 
         <InputField
-          label={'Email ID'}
+          label="Email ID"
           icon={
             <MaterialIcons
               name="alternate-email"
@@ -44,10 +50,12 @@ const SignIn = ({navigation}) => {
             />
           }
           keyboardType="email-address"
+          value={email}
+          onChangeText={value => setEmail(value)}
         />
 
         <InputField
-          label={'Password'}
+          label="Password"
           icon={
             <Ionicons
               name="ios-lock-closed-outline"
@@ -59,9 +67,11 @@ const SignIn = ({navigation}) => {
           inputType="password"
           fieldButtonLabel={'Forgot?'}
           fieldButtonFunction={() => {}}
+          value={password}
+          onChangeText={value => setEmail(value)}
         />
 
-        <CustomButton label={'Login'} onPress={() => {}} />
+        <CustomButton label={'Login'} onPress={() => login(email, password)} />
 
         <Text style={{textAlign: 'center', color: '#666', marginBottom: 30}}>
           Or, login with ...
